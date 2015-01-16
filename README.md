@@ -12,13 +12,13 @@ App contributors and taks
 
 Andrew (Group Leader)
 
-
 Obu 
-
 
 Benoit
 
 Daniel
+
+Stalin
 
 
 
