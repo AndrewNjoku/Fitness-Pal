@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Top Menu_Fitness Pal</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="topnav_style.css" />
+
+
+</head>
+
+
+<body>
+<h3>Top Navbar</h3>
+
+
+<div id="Logo">  <img src="logo.png" alt="Logo" width="200" height="100" >
+
+<p><a href="menu_1.html" target="menu">Menu 1</a> | <a href="menu_2.html" target="menu">Menu 2</a></p>
+</body>h
+</html>
