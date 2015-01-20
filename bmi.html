@@ -40,3 +40,46 @@
 		<h1>BMI CALULATOR</h1>
 		<br/>
 		<label> Weight
+			<input type="weight" name="weight" id = "weight" /> (kg)
+		</label>
+		<br/>
+		<br/>
+		<label> Height
+			<input type="height" name="height" id = "height"/> (cm)
+		</label>
+		<br/>
+		<br/>
+		<input type="button" name "BMI" value="BMI" onClick= "BMIcalc()" />
+			<input type = "reset" name="Reset" value="Reset" />
+	</form>
+	</div>
+	
+	<script>
+		
+		function BMIcalc()
+		{
+		var w_txt  = document.getElementById('weight');
+		var h_txt  = document.getElementById('height');
+		
+		var w = parseInt(w_txt.value);
+		var h = parseInt(h_txt.value);
+		
+		var errMsg ="";
+		if(w <= 0)
+			errMsg = errMsg + "* Weight cannot be negative \n";
+			
+		if(h <= 0)
+		{
+			errMsg = errMsg + "* Height cannot be negative \n";
+		}
+		
+		if (errMsg != "")
+		{
+				alert(errMsg);
+		}
+			
+			
+		}
+	</script>
+</body>
+</html>
