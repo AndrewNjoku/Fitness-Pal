@@ -64,22 +64,51 @@
 		var w = parseInt(w_txt.value);
 		var h = parseInt(h_txt.value);
 		
+		h = h / 100;
+		
 		var errMsg ="";
 		if(w <= 0)
-			errMsg = errMsg + "* Weight cannot be negative \n";
+			{
+				errMsg = errMsg + "* Weight cannot be negative \n";
+			}
 			
 		if(h <= 0)
 		{
 			errMsg = errMsg + "* Height cannot be negative \n";
 		}
 		
+		
 		if (errMsg != "")
 		{
 				alert(errMsg);
 		}
-			
-			
+		else{
+			var BMI = ((w)/(h*h));
+
+			var resultMsg = "";
+			if(BMI < 19)
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Underweight";
+
+			else if (BMI < 25) 
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Normal";
+
+			else if (BMI < 30) 
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Overweight";
+
+			else
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Obese";
+
+
+			alert(resultMsg);
+
+
+
+
+
 		}
+		
+		}
+	
 	</script>
 </body>
 </html>
