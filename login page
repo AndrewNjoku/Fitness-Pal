@@ -1,0 +1,64 @@
+
+/*********************This is login page***********************
+
+<!DOCTYPE html>
+<html>
+<body>
+	<CENTER><h3>FitnessPal login</h3></CENTER>
+	<form action="FitnessPal.php" method="POST">
+		<p><b>Username </b><input type="text" name="uName"/>
+		<p><b>Password </b><input type="password" name="pass"/>
+		<br />
+		<input type="Submit" value="Login" name="Submit"/>
+	</form>
+</body>
+</html>
+
+
+/*******************The code runs at the server. 
+*******************it checks the user username and password with database username and password.
+
+<?php
+ 	$host = "localhost";
+	$user ="root";
+	$password = "gate";
+	$database = "Fitnesspal"; 
+	
+	$db =mysql_connect($host,$user,$password);
+	$found = mysql_select_db($database)or die("couldnt connect");
+	
+	if(isset($_POST['Submit']))
+	{
+		$username=mysql_escape_string($_POST['uName']);
+		$password=mysql_escape_string($_POST['pass']);
+		if(!$_POST['uName']||!$_POST['pass'])
+		{
+			echo("<SCRIPT LANGUAGE='Javascript'>
+				window.alert('you didnt fill all the fields')
+				window.location.href='web.php'
+				</SCRIPT>");
+			exit();
+		}
+		$sql=mysql_query("SELECT* FROM login WHERE `userName`='$username'
+			AND `password`='$password'");
+		if(mysql_num_rows($sql)>0)
+		{
+			echo("<SCRIPT LANGUAGE='JavaScript'> 
+					window.alert('successful')
+					window.location.href='web.php'
+					</SCRIPT>");
+			echo $query;
+			//exit();
+		}
+		else 
+			echo("<SCRIPT LANGUAGE='Javascript'>
+					window.alert('unsuccesful')
+					window.location.href='web.php'
+					</SCRIPT>");
+			exit();
+	}
+	else 
+	{
+		
+	}
+?>
