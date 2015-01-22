@@ -2,6 +2,39 @@
 body {
 	font-family:verdana,arial,sans-serif;
 	font-size:10pt;
-	margin:10px;
+	
 	background-color:#0098d9;
+	overflow:hidden;
+	
+padding-top:50px;
+
 	}
+	
+#Logo {
+	
+	position:fixed;
+	
+	top:-40px;
+	left:-140px;
+
+	
+	
+	
+	
+}
+#Menu
+{
+	position:absolute;
+
+	right:-140px;
+	top:-32px;
+
+      
+	
+	
+	
+	
+	
+}
+
+
