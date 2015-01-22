@@ -1,0 +1,25 @@
+********************************MEMBER PAGE*******************************
+<?php
+
+session_start();
+
+error_reporting(E_ALL^E_NOTICE);
+
+if($_SESSION['username'])
+
+echo "Welcome, ".$_SESSION['username']."!<br><a href='logout.php'>Logout</a><br><a href='changepassword.php'>Change password</a>";
+
+else
+
+die ("You must be logged in!");
+?>
+**********************************LOGOUT*******************************************
+<?php
+
+session_start();
+
+session_destroy();
+
+echo "You've been logged out <a href='index.php'>Click here</a> to return";
+
+?>
