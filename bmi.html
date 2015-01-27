@@ -8,14 +8,15 @@
 <style type = "text/css">
 	body
 	{
-		background:#FFC;
+		background:#FFFFFF;
 	}
 
 	div
 	{
+		font-family:verdana,arial,sans-serif;
 		border:2px solid #F69;
 		padding:10px 40px;
-		background:#FCC;
+		background:#04B9C6;
 		width:300px;
 		border-radius:1px;
 		box-shadow:10px 10px 2px #CCC;
@@ -26,7 +27,7 @@
 
 	h1
 	{
-		color:#F06;
+		color:#0D0F0F;
 		text-align:center;
 	}
 
@@ -37,7 +38,7 @@
 	
 	<div>
 	<form>
-		<h1>BMI CALULATOR</h1>
+		<h1>BMI CALCULATOR</h1>
 		<br/>
 		<label> Weight
 			<input type="weight" name="weight" id = "weight" /> (kg)
@@ -87,17 +88,25 @@
 
 			var resultMsg = "";
 			if(BMI < 19)
-				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Underweight";
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + "  ==> Your are classified as Underweight";
 
 			else if (BMI < 25) 
-				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Normal";
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + "  ==> Your are classified as Normal";
 
 			else if (BMI < 30) 
-				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Overweight";
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + "  ==> Your are classified as Overweight";
 
 			else
-				resultMsg = "Your BMI is " + BMI.toFixed(2) + " Your are classified as Obese";
+				resultMsg = "Your BMI is " + BMI.toFixed(2) + "  ==> Your are classified as Obese";
 
+			if(BMI < 19)
+				document.body.style.backgroundColor="#FF9933"
+			 if(BMI > 19 && BMI < 25)
+				document.body.style.backgroundColor="#00CC00"
+			 if(BMI > 25 && BMI < 30 )
+				document.body.style.backgroundColor="#FF9933"
+			if (BMI > 30)
+				document.body.style.backgroundColor="#FF0000"
 
 			alert(resultMsg);
 
