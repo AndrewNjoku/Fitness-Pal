@@ -4,9 +4,7 @@
     <title>UK GYM Finder.co.uk</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-	<meta name="viewport" content="width=320, initial-scale=1">
-	<meta name="viewport" content="width=540, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="map project.css"/>
+	<link rel="stylesheet" type="text/css" href="map.css"/>
     <style>
     </style>
 	<style>
@@ -14,24 +12,21 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
     <script>
 // This example uses the autocomplete feature of the Google Places API.
-// It allows the user to find all hotels in a given place, within a given
-// country. It then displays markers for all the hotels returned,
-// with on-click details for each hotel.
-
+// It allows the user to find all GYM and fitness center in a given place.
+//It then displays markers for all the GYM and fitness centre returned,
+// with on-click details for each GYM and fitness center in UK.
 var map, places, infoWindow;
 var markers = [];
 var autocomplete;
 var countryRestrict = { 'country': 'uk' };
 var MARKER_PATH = 'https://maps.gstatic.com/intl/en_us/mapfiles/marker_green';
 var hostnameRegexp = new RegExp('^https?://.+?/');
-
 var countries = {
   'uk': {
     center: new google.maps.LatLng(54.8, -4.6),
     zoom: 6
   }
 };
-
 function initialize() {
   var myOptions = {
     zoom: countries['uk'].zoom,
@@ -41,15 +36,11 @@ function initialize() {
     zoomControl: false,
     streetViewControl: false
   };
-
   map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
-
   infoWindow = new google.maps.InfoWindow({
       content: document.getElementById('info-content')
       });
-
   // Create the autocomplete object and associate it with the UI input control.
-  // Restrict the search to the default country, and to place type "cities".
   autocomplete = new google.maps.places.Autocomplete(
       /** @type {HTMLInputElement} */(document.getElementById('autocomplete')),
       {
@@ -58,16 +49,13 @@ function initialize() {
         componentRestrictions: countryRestrict
       });
   places = new google.maps.places.PlacesService(map);
-
   google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-
-  // Add a DOM event listener to react when the user selects a country.
+  
   google.maps.event.addDomListener(document.getElementById('country'), 'change',
       setAutocompleteCountry);
 }
-
-// When the user selects a city, get the place details for the city and
-// zoom the map in on the city.
+// When the user selects a his or her place of search, get the place details and
+// zoom the map in.
 function onPlaceChanged() {
   var place = autocomplete.getPlace();
   if (place.geometry) {
@@ -77,21 +65,18 @@ function onPlaceChanged() {
   } else {
     document.getElementById('autocomplete').placeholder = 'Enter a city';
   }
-
 }
-
-// Search for hotels in the selected city, within the viewport of the map.
+// Search for GYM in the UK, within the viewport of the map.
 function search() {
   var search = {
     bounds: map.getBounds(),
     types: ['gym']
   };
-
   places.nearbySearch(search, function(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       clearResults();
       clearMarkers();
-      // Create a marker for each hotel found, and
+      // Create a marker for each GYM and fitness center found, and
       // assign a letter of the alphabetic to each marker icon.
       for (var i = 0; i < results.length; i++) {
         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
@@ -102,7 +87,7 @@ function search() {
           animation: google.maps.Animation.DROP,
           icon: markerIcon
         });
-        // If the user clicks a hotel marker, show the details of that hotel
+        // If the user clicks a GYM and fitness center marker, show the details of that GYM and fitness center
         // in an info window.
         markers[i].placeResult = results[i];
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
@@ -112,7 +97,6 @@ function search() {
     }
   });
 }
-
 function clearMarkers() { 
   for (var i = 0; i < markers.length; i++) {
     if (markers[i]) {
@@ -122,9 +106,7 @@ function clearMarkers() {
   markers = [];
 }
 
-// [START region_setcountry]
-// Set the country restriction based on user input.
-// Also center and zoom the map on the given country.
+// center and zoom the map when the user hit search button 
 function setAutocompleteCountry() {
   var country = document.getElementById('country').value;
   if (country == 'all') {
@@ -139,25 +121,21 @@ function setAutocompleteCountry() {
   clearResults();
   clearMarkers();
 }
-// [END region_setcountry]
 
 function dropMarker(i) {
   return function() {
     markers[i].setMap(map);
   };
 }
-
 function addResult(result, i) {
   var results = document.getElementById('results');
   var markerLetter = String.fromCharCode('A'.charCodeAt(0) + i);
   var markerIcon = MARKER_PATH + markerLetter + '.png';
-
   var tr = document.createElement('tr');
   tr.style.backgroundColor = (i % 2 == 0 ? '#F0F0F0' : '#FFFFFF');
   tr.onclick = function() {
     google.maps.event.trigger(markers[i], 'click');
   };
-
   var iconTd = document.createElement('td');
   var nameTd = document.createElement('td');
   var icon = document.createElement('img');
@@ -171,16 +149,14 @@ function addResult(result, i) {
   tr.appendChild(nameTd);
   results.appendChild(tr);
 }
-
 function clearResults() {
   var results = document.getElementById('results');
   while (results.childNodes[0]) {
     results.removeChild(results.childNodes[0]);
   }
 }
-
-// Get the place details for a hotel. Show the information in an info window,
-// anchored on the marker for the hotel that the user selected.
+// Get the place details for a GYM and fitness center. Show the information in an info window,
+// anchored on the marker for the GYM and fitness centre that the user selected.
 function showInfoWindow() {
   var marker = this;
   places.getDetails({placeId: marker.placeResult.place_id},
@@ -192,7 +168,6 @@ function showInfoWindow() {
         buildIWContent(place);
       });
 }
-
 // Load the place information into the HTML elements used by the info window.
 function buildIWContent(place) {
   document.getElementById('iw-icon').innerHTML = '<img class="gymIcon" ' +
@@ -209,10 +184,8 @@ function buildIWContent(place) {
   } else {
     document.getElementById('iw-phone-row').style.display = 'none';
  }
-
-
-  // Assign a five-star rating to the hotel, using a black star ('&#10029;')
-  // to indicate the rating the hotel has earned, and a white star ('&#10025;')
+  // Assign a five-star rating to the GYM and fitness centre, using a black star ('&#10029;')
+  // to indicate the rating the GYM and fitness centrehas earned, and a white star ('&#10025;')
   // for the rating points not achieved.
   if (place.rating) {
     var ratingHtml = '';
@@ -228,7 +201,6 @@ function buildIWContent(place) {
   } else {
     document.getElementById('iw-rating-row').style.display = 'none';
   }
-
   // The regexp isolates the first part of the URL (domain plus subdomain)
   // to give a short URL for displaying in the info window.
   if (place.website) {
