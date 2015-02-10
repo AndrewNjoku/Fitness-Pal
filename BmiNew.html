@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BMI CALCULATION </title>
+
+<style>
+body {
+    background:#fff;
+ }
+div {
+    font-family:verdana,arial,sans-serif;
+    font-size:100%;
+    border:2px solid #f69;
+    padding:10px 0;
+    background:#04b9c6;
+    width:80%;
+    max-width:300px;
+    border-radius:10px;
+    box-shadow:4px 4px 4px #999;
+    text-align:center;
+    margin:auto;
+ }
+h1 {   
+    margin:22px 2%;
+    font-size:170%;
+    color:#0d0f0f;
+    text-align:center;
+ }
+label {
+    display:block;
+    margin:10px 0;
+ }
+input[type=text]{
+    display:block;
+    width:75%;
+    margin:auto;
+ }
+textarea {
+    display:block;
+    margin:0 auto 10px;
+    width:75%;
+    height:60px;
+    padding:5px;
+    overflow:hidden;
+ }
+@media screen and (max-width:385px) {
+h1 {
+    font-size:110%;
+ }
+textarea {
+    font-size:60%;
+  }
+ }
+</style>
+
+<script>
+(function() {
+   'use strict';
+   var rslt,dbs;
+function init(){ 
+
+   rslt=document.getElementById('rslt');
+   dbs=document.body.style;
+
+document.getElementById('bmiform').reset();
+
+document.getElementById('rst').onclick=function(){
+   this.blur();
+   rslt.innerHTML='';
+   dbs.backgroundColor='#fff';
+ }
+document.getElementById('bmi').onclick=function(){
+   BMIcalc();
+  }
+ }
+
+function BMIcalc(){
+   var w_txt=document.getElementById('wght');
+   var h_txt=document.getElementById('hght');
+
+   var w=parseInt(w_txt.value);
+   var h=parseInt(h_txt.value);
+
+   h=h/100;
+
+   var errMsg='';
+
+if(w<=0) {
+   errMsg=errMsg+'* Weight cannot be negative';
+   rslt.innerHTML=errMsg;
+   return;
+ }
+if(h<=0) {
+   errMsg=errMsg+'* Height cannot be negative';
+   rslt.innerHTML=errMsg;
+   return;  
+ }
+if(!w||!h) {
+   rslt.innerHTML='Fill the width and height boxes';
+   return;   
+ }
+else {
+   var BMI=((w)/(h*h));
+   var resultMsg='';
+if(BMI<19) {
+   resultMsg='Your BMI is '+ BMI.toFixed(2)+' ==>\nYou are classified as Underweight';
+   dbs.backgroundColor='#f93';
+ }
+else {
+if(BMI<25) {
+   resultMsg='Your BMI is '+ BMI.toFixed(2)+' ==>\nYou are classified as Normal';
+   dbs.backgroundColor='#0c0';  
+ }
+else { 
+if(BMI<30) {
+   resultMsg='Your BMI is '+BMI.toFixed(2)+' ==>\nYou are classified as Overweight';
+   dbs.backgroundColor='#f93';
+ }
+else {
+resultMsg='Your BMI is '+BMI.toFixed(2)+' ==>\nYou are classified as Obese';
+   dbs.backgroundColor='#f00';
+    }
+   }
+  }
+ }
+   rslt.innerHTML=resultMsg;
+   document.getElementById('bmi').blur();
+ }
+   window.addEventListener?
+   window.addEventListener('load',init,false):
+   window.attachEvent('onload',init);
+})();
+</script>
+
+</head>
+<body>
+
+<div>
+<form id="bmiform" action="#">
+<h1>BMI CALCULATOR</h1>
+<label for="wght">Weight (kg)</label><input type="text" name="wght" id="wght"/>
+<label for="hght">Height (cm)</label><input type="text" name="hght" id="hght"/> 
+<label>Result</label><textarea name="rslt" id="rslt" readonly="readonly"></textarea>
+<input type="button" id="bmi" value="BMI"/>
+<input type="reset" id="rst" value="Reset"/>
+</form>
+</div>
+
+</body>
+</html>
