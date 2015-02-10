@@ -1,0 +1,77 @@
+body,html
+{
+	padding-top: 30px;
+}
+
+#register
+{
+	margin-left: 10em;
+}
+#firstName
+{
+	margin-left: 60px;
+	margin-bottom: 5px;
+}
+#lastName
+{
+	margin-left: 62px;
+	margin-bottom: 5px;
+}
+#gender
+{
+	margin-left: 80px;
+	margin-bottom: 5px;
+}
+#email
+{
+	margin-left: 92px;
+	margin-bottom: 5px;
+}
+#username
+{
+	margin-left: 65px;
+	margin-bottom: 5px;
+}
+#password
+{
+	margin-left: 68px;
+	margin-bottom: 5px;
+}
+#rePassword
+{
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+#submit
+{
+	margin-left: 9.5em;
+	margin-top: 10px;
+}
+
+
+
+#heading
+{
+	margin-left: 10em;
+}
+#logname
+{
+	margin-left: 6.5em;
+	margin-top: 10px;
+}
+#pass
+{
+	margin-left: 6.8em;
+	margin-top: 10px;
+	height: 10px;
+}
+#go
+{
+	margin-left: 10em;
+	margin-top: 30px;
+}
+#go a 
+{
+	color: rgb(0,100,255);
+	text-decoration: none;
+}
