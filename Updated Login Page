@@ -1,0 +1,31 @@
+********************UPDATED LOGIN PAGE********************
+
+<html>
+
+<head>
+    
+<link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+
+    <form action='login.php' method='POST'>
+      
+      <p class="username">
+        <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="username" id="username" />
+      </p>
+      
+      <p class="password">
+        <input name="password" type="password" class="validate[required,custom[email]] feedback-input" id="password" placeholder="password" />
+      </p>
+      
+      <div class="submit">
+        <input type="submit" value="Log in" id="button-blue"/>
+        <div class="ease"></div>
+        </form>
+          
+        <form action='register.php' method='POST'>  
+          <div class="submit">
+        <input type="submit" value="Sign up" id="button-blue"/>
+        <div class="ease"></div>
+            </form>
+          
+</html>
