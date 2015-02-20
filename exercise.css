@@ -1,0 +1,46 @@
+h1{
+	text-align: center;
+}
+h3{
+	text-align: center;
+	color:rgb(0,0,255);
+}
+img.pic{
+
+	height: 200px;
+	width: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+p.bold{
+	text-align: center;
+	font-weight: bold;
+}
+iframe.video{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+p.vid{
+	text-align: center;
+}
+
+p.left{
+	margin-left: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	color: rgb(0,255,0);
+
+}
+
+p.right{
+	margin-right: 15px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	color: rgb(255,0,0);
+}
+
