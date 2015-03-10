@@ -1,5 +1,4 @@
 
-
 body {
 	font-family:verdana,arial,sans-serif;
 	font-size:10pt;
@@ -39,8 +38,8 @@ height:100px;
 {
 	position:absolute;
 
-	right:-90px;
-	top:-55px;
+	right:65px;
+	top:10px;
 
       
 }
@@ -56,20 +55,15 @@ width:10px;
   background-color:#CCC;
   display:none;}
 
-#wrap
-{
-	
-	
- width:100px
- 
-  }
+
 
 #chain
 {
 	
 	position:relative;
-	top:-140px;
-	left:-27px;
+	top:70px;
+	left:-10px;
+	z-index:20;
 }
 
  
@@ -83,17 +77,20 @@ width:10px;
     width:100%;
     box-shadow:0px 1px 3px rgba(0,0,0,0.2);
     background:#0098d9;
+    z-index:100;
 }
  
 .menu {
     width:60px;
     margin:0px auto;
+    z-index:100;
 }
  
 .menu li {
     margin:0px;
     list-style:none;
     font-family:'Ek Mukta';
+    z-index:100;
 }
  
 .menu a {
@@ -131,34 +128,94 @@ width:10px;
  
 /*----- Bottom Level -----*/
 .menu li:hover .sub-menu {
-    z-index:1;
+    z-index:100;
     opacity:1;
 }
  
 .sub-menu {
-    width:100%;
+    width:300px;
     padding:5px 0px;
     position:absolute;
-    top:60%;
-    left:0px;
-    z-index:-1;
+    top:80%;
+    left:-130px;
+    
+    z-index:100;
     opacity:0;
     transition:opacity linear 0.15s;
-    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    box-shadow:10px 10px 3px rgba(0,0,0,0.2);
     background:#2e2728;
 }
  
 .sub-menu li {
     display:block;
-    font-size:16px;
+    font-size:22px;
 }
  
 .sub-menu li a {
-    padding:10px 30px;
+    padding:22px 30px;
     display:block;
 }
  
 .sub-menu li a:hover, .sub-menu .current-item a {
     background:#3e3436;
 }
+
+
+
+
+
+#Lightning
+{
+	
+	position:absolute;
+	
+	top:95px;
+	left:350px;
+	
+	
+}
+
+
+#Intro_text
+{
+	position:relative;
+	text-align:left;
+	font-family:"Arial Black";
+	padding-left:40px;
+	top:30px;
+	
+	
+	
+	
+}
+
+#heading
+{
+ position:absolute;
+ top:100px;	
+ z-index:40;
+ left:177px;
+ 
+ 	
+	
+	
+}
+
+
+#text
+{
+	
+	
+	position:absolute;
+	padding-left:30px;
+	padding-right:30px;
+	top:150px;
+	font-family:"Arial Black";
+	
+}
+	
+	
+	
+}
+
 
