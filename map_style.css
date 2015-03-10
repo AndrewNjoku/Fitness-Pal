@@ -1,14 +1,17 @@
-html, body, #map-canvas {
-        height: 100%;
+#map-canvas {
+	
+        height: 700px;
+        width:550px;
         margin: 0px;
-        padding: 0px
+        padding: 0px;
+        z-index:10;
       }
+      
+   
  table {
         font-size: 12px;
       }
-      #map-canvas {
-        width: 580px;
-      }
+      
       #listing {
         position: absolute;
         width: 258px;
@@ -25,17 +28,17 @@ html, body, #map-canvas {
         width: 200px;
         font-size: 14px;
         padding: 4px;
-        z-index: 5;
+        z-index: 15;
         background-color: #fff;
       }
       #locationField {
         position: absolute;
         width: 200px;
-        height: 25px;
-        left: 210px;
-        top: 0px;
-        z-index: 5;
-        background-color: #fff;
+        height: 30px;
+        left: 260px;
+        top: 40px;
+        z-index: 15;
+        background-color:white;
       }
       #controls {
         position: absolute;
@@ -78,3 +81,32 @@ html, body, #map-canvas {
       .iw_table_icon {
         text-align: right;
       }
+      
+#space
+{
+	
+	position:absolute;
+	background-color:white;
+	top:110px;
+	z-index:10;
+	
+	height:70px;
+	width:100%;
+	z-index:35;
+	right:110px;
+	
+	
+	
+}
+
+#pin
+{
+
+
+position:absolute;
+top:110px;
+left:30px;
+z-index:200;
+
+
+}
