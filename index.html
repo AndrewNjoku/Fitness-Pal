@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html>
-	<title>Main page</title>
-	<head>
-		
-		
-		<meta name="viewport" content="width=device-width">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" href="content.css" />
-		<link rel="stylesheet" href="footer_style.css" />
-		
-		
-		
-</head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<body>
+<link rel="stylesheet" href="test1.css"/>
+<link rel="stylesheet" href="topnav_style.css"/>
+<link rel="stylesheet" href="homepage-style.css"/>
+<link rel="stylesheet" href="footer_style.css"/>
+<script src="phonegap.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="test1.js"></script>
+
+
+
+<title>Untitled Document</title>
+
+</head>
+ 
+<body class="pushmenu-push">
+<nav class="pushmenu pushmenu-left">
+        <h3>Welcome</h3>
+    <a href="index.html">Home</a>
+    <a href="member.php">My Account</a>
+    <a href="">Exercise Hub</a>
+    <a href="Gym-timetable.html">Gym Schedule</a>
+    <a href="#">Goal Tracker</a>
+    <a href="BMI.html">BMI Calculator</a>
+    <a href="Gym_finder.html">Gym Finder</a>
+</nav>
+ 
+<div class="container">
 	
-	<!--This is the topnav menu-->
 	
 	
 	<div id="top_menu">
@@ -29,49 +43,19 @@
  
  
 
- 	
 
- <div id="Menu">
- 	
- 	
- 	<div class="menu-wrap">
-    <nav class="menu">
-    <ul class="clearfix">
- 	
-<li>
-                <a href="#"><img id="menubutton" src="menu-button.png" alt="Menu"  width="300" height="250px"  ></a>
  
-                <ul class="sub-menu">
-                	<li><a href = "homepage.html" target="content"> Home</a></li>
-                    <li><a href="">My Account</a></li>
-                    <li><a href="#">Exercise Catalogue</a></li>
-                    <!-- <li><a href="#">My Timetable</a></li> -->
-                    <li><a href="BMI.html">BMI Calculator</a></li>
-                    <!-- <li><a href="#">Goal Tracker</a></li> -->
-                    <li><a href="Gym_finder.html">GYM Finder</a></li>
-                </ul>
-            </li>
- 	
-  </div>
-</nav>
-
-
 
 <div id="chain">
 	
 	
-<img src="chain.png" alt="image" src ="Logo.png" align=width="100" height="50" top="12px" >
+<img src="chain.png" alt="chain" src ="Logo.png"align=width="100" height="50" top="12px" >
 
 </div>
 
-</div>
+
 </div>
 
-
-	
-	
-	
-	<!--This is the end of the topnav menu-->
 	
 	
 	
@@ -79,13 +63,22 @@
 	
 	
 	
-	  <div id="Intro">
+        <div class="main">
+        	
+        <section class="buttonset">
+        	
+            <div id="nav_list">Show/Hide Left Push Menu</div>
+        </section>
+         
+        <section class="content">
+        
+        <div id="Intro">
 	  	
 	  	
 	  	<div id="heading">
 	  		
 	  		
-	  		<img src="Heading.png"  width="110" height="30"  >
+	  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="Heading.png"  width="110" height="30"  >
 	  	
 	  	
 	  	</div>
@@ -104,37 +97,51 @@
 	  
 	  <div id="Intro_text">
 	  	
-	  	<p>  This app is designed to give the user a one stop destination for everything fitness related. I have split the target audience into three different sections. Experts/professionals, 
-	  		 Seasoned gym-goers with experience in the gym and keeping healthy and the beginners who up until this point haven't attempted to sustain a healthy lifestyle and keep fit. <br>
+	  	<p>  This app is designed to give the user a one stop destination for everything fitness related. It is all you need to bring with you to the gym in order to get the most out of your workouts. </p>
+	  		
+	  	<p>	Whether you are a beginner to working out
+	  		and want some help, advice and a structured hub of reliable information , or are a seasoned gym goer or proffesional and want access to an easy to use and intuitive Gym schedule and want to track your progress easily. <br>
 	  	</p>
+	  	
+	  	
+	  	 <img src="Easy.png" width="110" height="60">
         
             
            </div>
            
            
-           <div id="Login_heading">
-            <img src="Login_text.png" width="200" height="50">
-           </div>
+           &nbsp&nbsp&nbsp&nbsp
+           &nbsp&nbsp&nbsp&nbsp
+           &nbsp&nbsp&nbsp&nbsp
+           &nbsp&nbsp&nbsp&nbsp
+           &nbsp&nbsp&nbsp&nbsp
            
            
-          <div id="Login_signup">
+           
+           
+           
+           
           
+    <form action='login.php' method="post">
+      
+      <p class="username">
+        <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="username" id="username" />
+      </p>
+      
+      <p class="password">
+        <input name="password" type="password" class="validate[required,custom[email]] feedback-input" id="password" placeholder="password" />
+      </p>
+      
+      <div class="submit">
+        <input type="submit" value="Log in" id="button-blue"/>
+        <div class="ease"></div>
+        </form>
           
-	    <form action="logIn.php" method="POST">
-		<div id="logname">
-			Username <input type="text" name="uName"/><br>
-		</div>
-		<div id="pass">
-			Password <input type="password" name="pass"/>
-		</div>
-		<br />
-		<div id="go">
-			<input type="Submit" value="Login" name="Submit"><br />
-			<!-- <a href="signUpTable.html">Sign up?</a> -->
-			<a href="signup-integrated.html">Sign Up</a>
-
-		</div>
-	</form>
+        <form action='signUpTable.html' method="post">  
+          <div class="submit">
+        <input type="submit" value="Sign up" id="button-blue"/>
+        <div class="ease"></div>
+            </form>
             
             
 	</div>
@@ -144,18 +151,16 @@
 		
 		
 		
-	   <p> <h5>   Copyright CS Networks 2015  </h5>   </p>    <div id="footerlinks"> <h4>   Contact Us &nbsp&nbsp&nbsp&nbsp About us </h4> </div> <br>      
+	   <p> <h5>   Copyright CS Networks 2015  </h5>   </p> 
+	   <p> <h4>   Contact Us &nbsp&nbsp&nbsp&nbsp About us </h4> </p> </div>      
 	
 		
 		
-	</div>
+	
 
 	
-	
-	
-	
+        </section><!-- END END content -->
+    </div><!-- END main -->
+</div><!-- END container -->
 </body>
 </html>
-
-		
-	
