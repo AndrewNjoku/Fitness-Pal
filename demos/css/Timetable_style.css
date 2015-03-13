@@ -1,0 +1,40 @@
+ 
+
+    th,td
+    {
+    	word-wrap: break-word;
+        max-width: 90px;
+        margin: 0;
+        text-align: center;
+        border-collapse: collapse;
+        outline: 1px solid #e3e3e3;
+    }
+
+    td
+    {
+    	
+        padding: 20px 4px;
+        background:#dddddd;
+    }
+
+    th
+    {
+        background: gray;
+        color: white;
+        padding: 20px 4px;
+    }
+
+    td:active
+    {
+        cursor: pointer;
+        background:#dddddd ;
+        color: white;
+        //*transform:scale(1.5);*/
+      }
+    
+#timetable{
+	
+	
+	position:absolute;
+	top:200px;
+}

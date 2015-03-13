@@ -1,0 +1,170 @@
+
+body {
+	font-family:verdana,arial,sans-serif;
+	font-size:10pt;
+	overflow:hidden;
+	background-color:white;
+	margin:0px;
+	
+
+
+	}
+	
+#Logo {
+	
+	position:fixed;
+	
+	top:-40px;
+	left:-140px;
+
+	
+	
+	
+	
+}
+
+#top_menu
+{
+	
+background-color:#0098d9;	
+margin:0;
+width:100%;
+height:100px;
+}
+
+
+
+
+
+
+
+
+#chain
+{
+	
+	position:relative;
+	top:70px;
+	left:-10px;
+	z-index:20;
+}
+
+ 
+.clearfix:after {
+    display:block;
+    clear:both;
+}
+ 
+
+
+
+#Lightning
+{
+	
+	position:absolute;
+	
+	top:95px;
+	left:350px;
+	
+	
+}
+
+
+#Intro_text
+{
+	position:relative;
+	text-align:left;
+	font-family:"Arial Black";
+	padding-left:40px;
+	top:30px;
+	
+	
+	
+	
+}
+
+#heading
+{
+ position:absolute;
+ top:100px;	
+ z-index:40;
+ left:177px;
+ 
+ 	
+	
+	
+}
+
+
+#text
+{
+	
+	
+	position:absolute;
+	padding-left:30px;
+	padding-right:30px;
+	top:150px;
+	font-family:"Arial Black";
+	
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+#menubar {
+    width:100%;
+    background-color:#444;
+    color: #fff;
+    padding: 10px;
+}
+
+#button {
+    cursor:pointer;
+}
+
+#menu, #right {
+    display:inline;
+}
+
+#menu li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+#right {
+    width:100%;
+    background-color: #fff;
+    z-index: 5;
+    position: fixed;
+    left: 0px;
+    height: 100%;
+    -webkit-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+        moz-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+          o-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+            box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+#right p {
+    padding: 10px;
+}
+
+#menu {
+    float:left;
+    width: 350px;
+    height: 100%;
+}
+
+#menu li {
+    background-color:#444;
+    border-bottom: 1px solid #888;
+}
+	
+	
+	
+
+
+
