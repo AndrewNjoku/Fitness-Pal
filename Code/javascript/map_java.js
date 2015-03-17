@@ -1,4 +1,3 @@
-
 // This example uses the autocomplete feature of the Google Places API.
 // It allows the user to find all GYM and fitness center in a given place.
 //It then displays markers for all the GYM and fitness centre returned,
@@ -48,7 +47,7 @@ function onPlaceChanged() {
   var place = autocomplete.getPlace();
   if (place.geometry) {
     map.panTo(place.geometry.location);
-    map.setZoom(12);
+    map.setZoom(15);
     search();
   } else {
     document.getElementById('autocomplete').placeholder = 'Enter a city';
