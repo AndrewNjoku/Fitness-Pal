@@ -74,6 +74,7 @@
         height: 50px;
         width: 60px;
         text-indent: -99999em;  
+        z-index: 1000;
 }
  
 #nav_list.active {
