@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="css/map_style.css"/>
+	<link rel="stylesheet" href="css/footer_style.css"/>
+    <link rel="stylesheet" href="css/topnav_style.css"/>
+    <script src="phonegap.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="javascript/menu.js"></script>
+
+    
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script src="javascript/map_java.js"></script>
+  </head>
+
+  <body style="margin:0px; padding:0px;" onload="initialize()">
+ 
+<body class="pushmenu-push">
+<nav class="pushmenu pushmenu-left">
+        
+        <h3>Welcome</h3>
+    <a href="index.html">Home</a>
+    <a href="member.php">My Account</a>
+    <a href="exerciseN.html">Exercise Hub</a>
+    <a href="Gym-timetable.html">Gym Schedule</a>
+    <a href="#">Goal Tracker</a>
+    <a href="BMI.html">BMI Calculator</a>
+    <a href="Gym_finder.html">Gym Finder</a>
+</nav>
+ 
+<div class="container">
+	
+	
+	
+	<div id="top_menu">
+		
+
+
+
+ <div id="Logo">
+ 	
+ <img src="images/Logo.png" alt="Logo" src ="images/Logo.png" align="left" width="370" height="150" top="12px" target="_blank" ></div>
+ 
+ 
+
+
+ 
+
+<div id="chain">
+	
+	
+<img src="images/chain.png" alt="chain" src ="Logo.png"align=width="100" height="50" top="12px" >
+
+</div>
+
+
+</div>
+
+	
+	
+	
+	
+	
+	
+	
+        <div class="main">
+        	
+        <section class="buttonset">
+        	
+            <div id="nav_list">Show/Hide Left Push Menu</div>
+        </section>
+         
+        <section class="content">
+  	
+<div id="heading">
+	
+	<img src="images/Gym_finder_heading.png" width="120" height="50">
+	
+</div>
+    
+    
+    <div id="pin">
+    	
+   <img src="images/pin.png" width="100" height="90">
+   
+    </div>
+    
+    <div id="space">
+    	
+    	<div id="locationField">
+      <input id="autocomplete" placeholder="Search" type="text" />
+    </div>
+    
+    
+    	
+    </div>
+
+    <div id="map-canvas"></div>
+   
+   <div id="listing">
+      <table id="resultsTable">
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+
+<div style="visibility: hidden">  
+   <div id="info-content">
+      <table>
+        <tr id="iw-url-row" class="iw_table_row">
+          <td id="iw-icon" class="iw_table_icon"></td>
+          <td id="iw-url"></td>
+        </tr>
+        <tr id="iw-address-row" class="iw_table_row">
+          <td class="iw_attribute_name">Address:</td>
+          <td id="iw-address"></td>
+        </tr>
+		<tr id="iw-Postcode-row" class="iw_table_row">
+          <td class="iw_attribute_name">Postcode:</td>
+          <td id="iw-Postcode"></td>
+        </tr>
+        <tr id="iw-phone-row" class="iw_table_row">
+          <td class="iw_attribute_name">Telephone:</td>
+          <td id="iw-phone"></td>
+        </tr>
+        <tr id="iw-rating-row" class="iw_table_row">
+          <td class="iw_attribute_name">Rating:</td>
+          <td id="iw-rating"></td>
+        </tr>
+        <tr id="iw-website-row" class="iw_table_row">
+          <td class="iw_attribute_name">Website:</td>
+          <td id="iw-website"></td>
+        </tr>
+      </table>
+    </div>
+	</div>
+	
+	
+<div id="footer">
+		
+		
+		
+	   <p> <h5>   Copyright CS Networks 2015  </h5>   </p>    <div id="footerlinks"> <h4>   Contact Us &nbsp&nbsp&nbsp&nbsp About us </h4> </div> <br>      
+	
+		
+		
+	</div>
+
+	
+        </section><!-- END END content -->
+    </div><!-- END main -->
+</div><!-- END container -->
+</body>
+</html>

@@ -1,0 +1,49 @@
+.firstName
+{
+	margin-left: 61px;
+	margin-bottom: 5px;
+	
+}
+
+.lastName
+{
+	margin-left: 63px;
+	margin-bottom: 5px;
+}
+.gender
+{
+	margin-left: 80px;
+	margin-bottom: 5px;
+}
+
+.email
+{
+	margin-left: 103px;
+	margin-bottom: 5px;
+}
+.username
+{
+	margin-left: 68px;
+	margin-bottom: 5px;
+}
+.password
+{
+	margin-left: 73px;
+	margin-bottom: 5px;
+}
+}
+.rePassword
+{
+	margin-left: 0px;
+	margin-bottom: 5px;
+}
+.sub
+{
+	margin-left: 14em;
+	margin-top: 5px;
+}
+#register
+{
+	margin-left: 12em;
+	margin-top: 5em;
+}

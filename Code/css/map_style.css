@@ -1,0 +1,112 @@
+#map-canvas {
+	
+        height: 700px;
+        width:550px;
+        margin: 0px;
+        padding: 0px;
+        z-index:10;
+      }
+      
+   
+ table {
+        font-size: 12px;
+      }
+      
+      #listing {
+        position: absolute;
+        width: 258px;
+        height: 480px;
+        overflow: auto;
+        left: 580px;
+        top: 0px;
+        cursor: pointer;
+        overflow-x: hidden;
+      }
+      #findhotels {
+        position: absolute;
+        text-align: right;
+        width: 200px;
+        font-size: 14px;
+        padding: 4px;
+        z-index: 15;
+        background-color: #fff;
+      }
+      #locationField {
+        position: absolute;
+        width: 200px;
+        height: 30px;
+        left: 260px;
+        top: 40px;
+        z-index: 15;
+        background-color:white;
+      }
+      #controls {
+        position: absolute;
+        left: 310px;
+        width: 160px;
+        top: 0px;
+        z-index: 5;
+        background-color: #fff;
+      }
+      #autocomplete {
+        width: 100%;
+      }
+      #country {
+        width: 100%;
+      }
+      .placeIcon {
+        width: 20px;
+        height: 34px;
+        margin: 4px;
+      }
+      .hotelIcon {
+        width: 24px;
+        height: 24px;
+      }
+      #resultsTable {
+        border-collapse: collapse;
+        width: 240px;
+      }
+      #rating {
+        font-size: 13px;
+        font-family: Arial Unicode MS;
+      }
+      .iw_table_row {
+        height: 18px;
+      }
+      .iw_attribute_name {
+        font-weight: bold;
+        text-align: right;
+      }
+      .iw_table_icon {
+        text-align: right;
+      }
+      
+#space
+{
+	
+	position:absolute;
+	background-color:white;
+	top:110px;
+	z-index:10;
+	
+	height:70px;
+	width:100%;
+	z-index:35;
+	right:110px;
+	
+	
+	
+}
+
+#pin
+{
+
+
+position:absolute;
+top:110px;
+left:30px;
+z-index:200;
+
+
+}

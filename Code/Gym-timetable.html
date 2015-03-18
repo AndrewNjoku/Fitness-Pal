@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+	<link rel="stylesheet" href="css/topnav_style.css"/>
+	<link rel="stylesheet" href="css/footer_style.css" />
+	<link rel="stylesheet" href="css/menu.css"/>
+<link href="css/fullcalendar.css" rel='stylesheet' />
+<link href="css/fullcalendar.print.css" rel='stylesheet' media='print' />
+<script src="javascript/moment.min.js"></script>
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/jquery-ui.custom.min.js"></script>
+<script src="javascript/fullcalendar.min.js"></script>
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+<script src="javascript/menu.js"></script>
+
+
+<script>
+
+
+	$(document).ready(function() {
+
+
+		/* initialize the external events
+		-----------------------------------------------------------------*/
+
+		$('#external-events .fc-event').each(function() {
+
+			// store data so the calendar knows to render an event upon drop
+			$(this).data('event', {
+				title: $.trim($(this).text()), // use the element's text as the event title
+				stick: true // maintain when user navigates (see docs on the renderEvent method)
+			});
+
+			// make the event draggable using jQuery UI
+			$(this).draggable({
+				zIndex: 999,
+				revert: true,      // will cause the event to go back to its
+				revertDuration: 0  //  original position after the drag
+			});
+
+		});
+
+
+		/* initialize the calendar
+		-----------------------------------------------------------------*/
+
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'agendaWeek,agendaDay'
+			},
+			editable: true,
+			droppable: true, // this allows things to be dropped onto the calendar
+			drop: function() {
+				// is the "remove after drop" checkbox checked?
+				if ($('#drop-remove').is(':checked')) {
+					// if so, remove the element from the "Draggable Events" list
+					$(this).remove();
+				}
+			}
+		});
+
+
+	});
+
+</script>
+<style>
+
+	
+	
+		
+	#external-events {
+		float: left;
+		width: 100px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+		text-align: left;
+	}
+	
+	#external-events-sets{
+		float: center;
+		width: 100px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+		text-align: left;
+		
+	}
+		
+	#external-events h4 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 1em;
+	}
+		
+	#external-events .fc-event {
+		margin: 10px 0;
+		cursor: pointer;
+	}
+		
+	#external-events p {
+		margin: 1.5em 0;
+		font-size: 11px;
+		color: #666;
+	}
+		
+	#external-events p input {
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	#calendar {
+		float: right;
+		width: 450px;
+	}
+
+</style>
+</head>
+
+<body class="pushmenu-push">
+	
+	
+	
+<nav class="pushmenu pushmenu-left">
+        <h3>Welcome</h3>
+    <a href="index.html">Home</a>
+    <a href="member.php">My Account</a>
+    <a href="">Exercise Hub</a>
+    <a href="Gym-timetable.html">Gym Schedule</a>
+    <a href="#">Goal Tracker</a>
+    <a href="BMI.html">BMI Calculator</a>
+    <a href="Gym_finder.html">Gym Finder</a>
+</nav>
+ 
+<div class="container">
+	
+	
+	
+	<div id="top_menu">
+		
+
+
+
+ <div id="Logo">
+ 	
+ <img src="images/Logo.png" alt="Logo" src ="Logo.png" align="left" width="370" height="150" top="12px" target="_blank" ></div>
+ 
+ 
+
+
+ 
+
+<div id="chain">
+	
+	
+<img src="images/chain.png" alt="chain" src ="Logo.png"align=width="100" height="50" top="12px" >
+
+</div>
+
+
+</div>
+
+	
+	
+	
+	
+	
+	
+	
+        <div class="main">
+        	
+        <section class="buttonset">
+        	
+            <div id="nav_list">Show/Hide Left Push Menu</div>
+        </section>
+         
+        <section class="content">
+	
+	
+	
+	<div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Muscles Trained</h4>
+			<div class='fc-event'>Biceps</div>
+			<div class='fc-event'>Triceps</div>
+			<div class='fc-event'>Shoulders</div>
+			<div class='fc-event'>Chest</div>
+			<div class='fc-event'>Core</div>
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+		
+		
+		
+		<div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Sets</h4>
+			<div class='fc-event'>One</div>
+			<div class='fc-event'>Two</div>
+			<div class='fc-event'>Three</div>
+			<div class='fc-event'>Four</div>
+			<div class='fc-event'>Five</div>
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+
+		<div id='calendar'></div>
+
+		<div style='clear:both'></div>
+
+	</div>
+	
+		<div id="footer">
+		
+		
+		
+	   <p> <h5>   Copyright CS Networks 2015  </h5>   </p>    <div id="footerlinks"> <h4>   Contact Us &nbsp&nbsp&nbsp&nbsp About us </h4> </div> <br>      
+	
+		
+		
+	</div>
+	
+	      </section><!-- END END content -->
+    </div><!-- END main -->
+</div><!-- END container -->
+
+</body>
+</html>
