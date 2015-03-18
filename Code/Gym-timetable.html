@@ -73,12 +73,22 @@
 	
 		
 	#external-events {
-		float: center;
-		width: 450px;
+		float: left;
+		width: 100px;
 		padding: 0 10px;
 		border: 1px solid #ccc;
 		background: #eee;
 		text-align: left;
+	}
+	
+	#external-events-sets{
+		float: center;
+		width: 100px;
+		padding: 0 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+		text-align: left;
+		
 	}
 		
 	#external-events h4 {
@@ -105,7 +115,7 @@
 
 	#calendar {
 		float: right;
-		width: 500px;
+		width: 450px;
 	}
 
 </style>
@@ -181,6 +191,23 @@
 			<div class='fc-event'>Shoulders</div>
 			<div class='fc-event'>Chest</div>
 			<div class='fc-event'>Core</div>
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+		
+		
+		
+		<div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Sets</h4>
+			<div class='fc-event'>One</div>
+			<div class='fc-event'>Two</div>
+			<div class='fc-event'>Three</div>
+			<div class='fc-event'>Four</div>
+			<div class='fc-event'>Five</div>
 			<p>
 				<input type='checkbox' id='drop-remove' />
 				<label for='drop-remove'>remove after drop</label>
