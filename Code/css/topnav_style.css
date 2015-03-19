@@ -2,7 +2,7 @@
 body {
 	font-family:verdana,arial,sans-serif;
 	font-size:10pt;
-	overflow:hidden;
+	
 	background-color:white;
 	margin:0px;
 	
@@ -25,18 +25,20 @@ body {
 
 #top_menu
 {
-	
+position:fixed;	
 background-color:#0098d9;	
 margin:0;
 width:100%;
 height:100px;
+z-index:300;
+
 }
 
 
 
 #Menu
 {
-	position:absolute;
+	position:fixed;
 
 	right:65px;
 	top:10px;
@@ -46,21 +48,12 @@ height:100px;
 
 
 
-#nav_menu
-
-{
-	
-width:10px;
- height:auto;
-  background-color:#CCC;
-  display:none;}
-
 
 
 #chain
 {
 	
-	position:relative;
+	position:fixed;
 	top:70px;
 	left:-10px;
 	z-index:20;
@@ -72,94 +65,6 @@ width:10px;
     clear:both;
 }
  
-/*----- Menu Outline -----*/
-.menu-wrap {
-    width:100%;
-    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
-    background:#0098d9;
-    z-index:100;
-}
- 
-.menu {
-    width:60px;
-    margin:0px auto;
-    z-index:100;
-}
- 
-.menu li {
-    margin:0px;
-    list-style:none;
-    font-family:'Ek Mukta';
-    z-index:100;
-}
- 
-.menu a {
-    transition:all linear 0.15s;
-    color:#919191;
-}
- 
-.menu li:hover > a, .menu .current-item > a {
-    text-decoration:none;
-    color:#0098d9;
-}
- 
-.menu .arrow {
-    font-size:11px;
-    line-height:0%;
-}
- 
-/*----- Top Level -----*/
-.menu > ul > li {
-   float:left;
-    display:inline-block;
-    position:relative;
-    font-size:19px;
-}
- 
-.menu > ul > li > a {
-    padding:1px 2px;
-    display:inline-block;
-    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
-}
- 
-.menu > ul > li:hover > a, .menu > ul > .current-item > a {
-    background:#0098d9;
-}
- 
-/*----- Bottom Level -----*/
-.menu li:hover .sub-menu {
-    z-index:100;
-    opacity:1;
-}
- 
-.sub-menu {
-    width:300px;
-    padding:5px 0px;
-    position:absolute;
-    top:80%;
-    left:-130px;
-    
-    z-index:100;
-    opacity:0;
-    transition:opacity linear 0.15s;
-    box-shadow:10px 10px 3px rgba(0,0,0,0.2);
-    background:#2e2728;
-}
- 
-.sub-menu li {
-    display:block;
-    font-size:22px;
-}
- 
-.sub-menu li a {
-    padding:22px 30px;
-    display:block;
-}
- 
-.sub-menu li a:hover, .sub-menu .current-item a {
-    background:#3e3436;
-}
-
 
 
 
