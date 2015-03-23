@@ -1,0 +1,30 @@
+!SESSION 2015-03-23 16:44:14.425 -----------------------------------------------
+eclipse.buildId=3.4.2.201308081805
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-03-23 16:44:38.525
+!MESSAGE An internal error occurred during: "Start Ruble bundle manager".
+!STACK 0
+java.lang.NullPointerException
+	at java.io.File.<init>(Unknown Source)
+	at com.aptana.scripting.internal.model.BundleMonitor.beginMonitoring(BundleMonitor.java:96)
+	at com.aptana.scripting.ScriptingActivator$1.run(ScriptingActivator.java:114)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2015-03-23 16:45:07.849 -----------------------------------------------
+eclipse.buildId=3.4.2.201308081805
+java.version=1.6.0_24
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.jobs 4 2 2015-03-23 16:45:59.760
+!MESSAGE An internal error occurred during: "Start Ruble bundle manager".
+!STACK 0
+java.lang.NullPointerException
+	at java.io.File.<init>(Unknown Source)
+	at com.aptana.scripting.internal.model.BundleMonitor.beginMonitoring(BundleMonitor.java:96)
+	at com.aptana.scripting.ScriptingActivator$1.run(ScriptingActivator.java:114)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

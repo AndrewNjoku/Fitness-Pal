@@ -9,11 +9,29 @@
 
 <!-- Gets rid of 300ms delay when pressing button on touch devices -->
 <script type='application/javascript' src='/path/to/fastclick.js'></script>
+
+<!-- Scrollstay allows vertical scrolling at the same time as disablng horizontal scrolling-->
+<script src="javascript/mootools-yui-compressed.js"</script>
+<script src="javascript/scrollspy.js"></script>
 <script src="javascript/jquery.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="javascript/menu.js"></script>
 <script src="fastClick.js"></script>
 
+<!-- Inline script controlling scrolling using scrollspy -->
+<script>
+
+	var ss = new ScrollSpy({
+     mode: 'vertical',
+     onTick: function(position,state,enters,leaves) {
+          $("stuff").style.left = -position.y+"px";
+     },
+     container: window
+});
+	
+	
+	
+</script>
 
 
 <title>Untitled Document</title>
@@ -76,13 +94,25 @@
          
         <section class="content">
         
-        <div id="Intro">
+       	 <div id="Lightning">
 	  	
+	  	<img src="images/Lightning.png" width="110" height="200">
+	  
+	  
+	  </div>
+	  	
+       
+       
+       
+        <div id="stuff">
+        	
+        	
+        
 	  	
 	  	<div id="heading">
 	  		
 	  		
-	  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/Heading.png"  width="110" height="30"  >
+	  		<img src="images/Heading.png"  width="110" height="30"  >
 	  	
 	  	
 	  	</div>
@@ -91,12 +121,7 @@
 	  
 	  	
 	  
-	  <div id="Lightning">
-	  	
-	  	<img src="images/Lightning.png" width="110" height="200">
-	  
-	  
-	  </div>
+	 
 	  
 	  
 	  <div id="Intro_text">
@@ -112,14 +137,6 @@
         
             
            </div>
-           
-           
-           &nbsp&nbsp&nbsp&nbsp
-           &nbsp&nbsp&nbsp&nbsp
-           &nbsp&nbsp&nbsp&nbsp
-           &nbsp&nbsp&nbsp&nbsp
-           &nbsp&nbsp&nbsp&nbsp
-           
            
            
            
