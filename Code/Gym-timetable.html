@@ -2,9 +2,13 @@
 <html>
 <head>
 <meta charset='utf-8' />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
 	<link rel="stylesheet" href="css/topnav_style.css"/>
 	<link rel="stylesheet" href="css/footer_style.css" />
 	<link rel="stylesheet" href="css/menu.css"/>
+	<!--<link rel="stylesheet" href="css/main.css"/> -->
 <link href="css/fullcalendar.css" rel='stylesheet' />
 <link href="css/fullcalendar.print.css" rel='stylesheet' media='print' />
 <script src="javascript/moment.min.js"></script>
@@ -52,6 +56,8 @@
 				center: 'title',
 				right: 'agendaWeek,agendaDay'
 			},
+			
+			defaultView:'agendaWeek',
 			editable: true,
 			droppable: true, // this allows things to be dropped onto the calendar
 			drop: function() {
@@ -73,23 +79,15 @@
 	
 		
 	#external-events {
-		float: left;
-		width: 100px;
+		float:left;
+		width: 50px;
 		padding: 0 10px;
 		border: 1px solid #ccc;
 		background: #eee;
 		text-align: left;
 	}
 	
-	#external-events-sets{
-		float: center;
-		width: 100px;
-		padding: 0 10px;
-		border: 1px solid #ccc;
-		background: #eee;
-		text-align: left;
-		
-	}
+	
 		
 	#external-events h4 {
 		font-size: 16px;
@@ -185,8 +183,8 @@
 	<div id='wrap'>
 
 		<div id='external-events'>
-			<h4>Muscles Trained</h4>
-			<p> Arms</p>
+			<h4>Legs</h4>
+			
 			<div class='fc-event'>Biceps</div>
 			<div class='fc-event'>Triceps</div>
 			<div class='fc-event'>Shoulders</div>
@@ -203,7 +201,29 @@
 		<div id='wrap'>
 
 		<div id='external-events'>
-			<h4>Sets</h4>
+			<h4>Arms</h4>
+			<div class='fc-event'>One Set</div>
+			<div class='fc-event'>Two Sets</div>
+			<div class='fc-event'>Three Sets</div>
+			<div class='fc-event'>Four Sets</div>
+			<div class='fc-event'>Five Sets</div>
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+
+		<div id='calendar'></div>
+
+		<div style='clear:both'></div>
+
+	</div>
+	
+	
+		<div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Chest</h4>
 			<div class='fc-event'>One Set</div>
 			<div class='fc-event'>Two Sets</div>
 			<div class='fc-event'>Three Sets</div>

@@ -2,8 +2,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/menu.css"/>
 <link rel="stylesheet" href="css/topnav_style.css"/>
+<link rel="stylesheet" href="css/main.css"/>
 
 <link rel="stylesheet" href="css/footer_style.css"/>
 
@@ -13,7 +15,7 @@
 <!-- Scrollstay allows vertical scrolling at the same time as disablng horizontal scrolling-->
 <script src="javascript/mootools-yui-compressed.js"</script>
 <script src="javascript/scrollspy.js"></script>
-<script src="javascript/jquery.js"></script>
+<!--<script src="javascript/jquery.js"></script>-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="javascript/menu.js"></script>
 <script src="fastClick.js"></script>
@@ -24,7 +26,7 @@
 	var ss = new ScrollSpy({
      mode: 'vertical',
      onTick: function(position,state,enters,leaves) {
-          $("stuff").style.left = -position.y+"px";
+          $("content").style.left = -position.y+"px";
      },
      container: window
 });
@@ -34,7 +36,7 @@
 </script>
 
 
-<title>Untitled Document</title>
+<title>Fitness Pal</title>
 
 </head>
  
@@ -93,23 +95,24 @@
         </section>
          
         <section class="content">
+        	
+        	
         
-       	 <div id="Lightning">
+       	 
 	  	
-	  	<img src="images/Lightning.png" width="110" height="200">
+	  	<img class="Lightning" src="images/Lightning.png" width="110" height="200">
 	  
-	  
-	  </div>
+	     </img>
+	 
 	  	
        
        
        
-        <div id="stuff">
         	
         	
         
 	  	
-	  	<div id="heading">
+	  	<div class="heading">
 	  		
 	  		
 	  		<img src="images/Heading.png"  width="110" height="30"  >
@@ -124,24 +127,25 @@
 	 
 	  
 	  
-	  <div id="Intro_text">
 	  	
-	  	<p>  This app is designed to give the user a one stop destination for everything fitness related. It is all you need to bring with you to the gym in order to get the most out of your workouts. </p>
+	  	<div id="Intro_text">
 	  		
-	  	<p>	Whether you are a beginner to working out
+	  	  This app is designed to give the user a one stop destination for everything fitness related. It is all you need to bring with you to the gym in order to get the most out of your workouts. 
+	  		
+	  		Whether you are a beginner to working out
 	  		and want some help, advice and a structured hub of reliable information , or are a seasoned gym goer or proffesional and want access to an easy to use and intuitive Gym schedule and want to track your progress easily. <br>
-	  	</p>
 	  	
+	  	</div>	  	
 	  	
-	  	 <img src="images/Easy.png" width="110" height="60">
+	  	 <img class="trafficlight" src="images/Easy.png" width="110" height="60">
         
             
-           </div>
+           </img>
            
            
            
            
-           
+        <div id="login"> 
           
     <form action='login.php' method="post">
       
@@ -167,13 +171,15 @@
             
 	</div>
 	</div>
+	</div>
 	
 	<div id="footer">
 		
 		
 		
 	   <p> <h5>   Copyright CS Networks 2015  </h5>   </p> 
-	   <p> <h4>   Contact Us &nbsp&nbsp&nbsp&nbsp About us </h4> </p> </div>      
+	   <p> <h4>   Contact Us &nbsp&nbsp&nbsp&nbsp About us </h4> </p>
+	    </div>      
 	
 		
 		

@@ -1,0 +1,77 @@
+
+
+
+
+
+.Lightning
+{
+	
+	
+	position:fixed;
+	
+	
+	top:104px;
+	right:10px;
+ 
+}
+
+
+
+.heading
+{
+	
+position:absolute;
+	
+	top:120px;
+	right:40%;
+ 
+ 
+	
+	
+}
+
+
+#Intro_text 
+{
+	position:absolute;
+	top:170px;
+	padding-left: 20px;
+	padding-right:20px;
+	
+	
+	
+	
+}
+
+.trafficlight
+{
+	
+	position:absolute;
+	top:350px;
+	right:165px;
+	
+}
+
+
+
+
+
+
+
+#login
+{
+	position:absolute;
+	top:400px;
+	right:130px;
+	
+	
+	
+}
+
+#BMI_text{
+	
+	
+	
+	position:absolute;
+	top:160px;
+}
