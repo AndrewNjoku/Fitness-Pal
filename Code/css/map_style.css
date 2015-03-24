@@ -1,7 +1,7 @@
 #map-canvas {
 	
-        height: 700px;
-        width:550px;
+        height: 600px;
+        width:auto;
         margin: 0px;
         padding: 0px;
         z-index:10;
@@ -17,10 +17,11 @@
         width: 258px;
         height: 480px;
         overflow: auto;
-        left: 580px;
-        top: 0px;
+        left: auto;
+        top: 200px;
         cursor: pointer;
         overflow-x: hidden;
+        z-index:100;
       }
       #findhotels {
         position: absolute;
