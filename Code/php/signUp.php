@@ -1,10 +1,10 @@
 <?php
 	mysql_connect("igor.gold.ac.uk","ma301an","Koolck94");
-	mysql_select_db("ma301an_myBlog") or die ("Could not connect");
+	mysql_select_db("ma301an_Fitnesspal1") or die ("Could not connect");
 
 	if(isset($_POST['submit']))	
 	{
-		$first_name = mysql_escape_string($_POST['firstname']);
+		$first_name = mysql_escape_string($_POST['firstName']);
 		$user_email = mysql_escape_string($_POST['email']);
 		$user_password = mysql_escape_string($_POST['password']);
 		$re_password = mysql_escape_string($_POST['rePassword']);
@@ -30,23 +30,23 @@
 		else 
 			$user_password = md5($user_password);
 			
-		$sql=mysql_query("SELECT* FROM Login WHERE `email`='$user_email'");
+		$sql=mysql_query("SELECT* FROM register WHERE `email`='$user_email'");
 		if(mysql_num_rows($sql)>0)
 		{
 			echo "is already in database";	
 		}
 		
-		if($first_name&&$user_email&&$user_password&&$re_password)
-		{
-			$query="INSERT INTO customer(fName,email,registeredDate)
-				VALUES('$first_name','$user_email','$date')";
-			$query1="INSERT INTO Login(email,password)
-				VALUES('$username','$user_password')";	
+	
+			$query="INSERT INTO register(firstName,email,password)
+				VALUES('$first_name','$user_email','$user_password')";	
 			
-			if(mysql_query($query)&&mysql_query($query1))
+			if(mysql_query($query))
 			{
 				echo "Registration is successful<br>";
-				echo "$first_name $last_name is now a member";
+				echo "$first_name is now a member";
+			}
+			else {
+				echo "Fucked up everything"
 			}
 		}
 	}

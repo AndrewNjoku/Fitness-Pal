@@ -18,7 +18,7 @@ body {
 	
 #Logo {
 	
-	position:fixed;
+	position:absolute;
 	
 	top:-40px;
 	left:-140px;
@@ -86,6 +86,28 @@ z-index:300;
 .clearfix:after {
     display:block;
     clear:both;
+}
+
+#heading2
+
+{
+	
+	position:absolute;
+	top:120px;
+	right:40%;
+	
+	
+	
+}
+
+#register
+{
+	position:absolute;
+	top:200px;
+	right:40%;
+	
+	
+	
 }
  
 
