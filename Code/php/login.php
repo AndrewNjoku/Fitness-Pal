@@ -1,91 +1,99 @@
-<?php
+// <?php
 
-session_start();
+// session_start();
 
-$email = $_POST['Email'];
-$password = $_POST['password'];
+// $email = $_POST['Email'];
+// $password = $_POST['password'];
 
-if ($email&&$password)
+// if ($email&&$password)
 
-{
+// {
 
-$connect = mysql_connect("igor.gold.ac.uk","ma301an","Koolck94") or die ("couldn't connect!");
-mysql_select_db("ma301an_FitnessPal1") or die("couldn't find db");
+// $connect = mysql_connect("igor.gold.ac.uk","ma301an","Koolck94") or die ("couldn't connect!");
+// mysql_select_db("ma301an_FitnessPal1") or die("couldn't find db");
 
-$query =mysql_query("SELECT * FROM login WHERE Email='$email'");
+// $query =mysql_query("SELECT * FROM login WHERE Email='$email'");
 
-$numrows = mysql_num_rows($query);
+// $numrows = mysql_num_rows($query);
 
-if ($numrows!=0)
+// if ($numrows!=0)
 
-{
-while ($row =mysql_fetch_assoc($query))
+// {
+// while ($row =mysql_fetch_assoc($query))
 
-{
+// {
 
-	$dbusername = $row['Email'];
-	$dbpassword = $row['password'];
+// 	$dbusername = $row['Email'];
+// 	$dbpassword = $row['password'];
 	
 
 	
 
-}
+// }
 
-//check if they match
-if ($email==$dbusername&&md5($password)==$dbpassword)
-{
+// //check if they match
+// if ($email==$dbusername&&md5($password)==$dbpassword)
+// {
 
-	echo "You're in! <a href='member.php'>Click</a> here to enter the member page.";
-	$_SESSION['username']=$dbusername;
-}
-	else
-		echo "incorrect password!";
-
-
-}
-
-	else
-		die("that user doesnt exist!");
+// 	echo "You're in! <a href='member.php'>Click</a> here to enter the member page.";
+// 	$_SESSION['username']=$dbusername;
+// }
+// 	else
+// 		echo "incorrect password!";
 
 
+// }
 
-}
-	else 
-		die("please enter a username and a password");
+// 	else
+// 		die("that user doesnt exist!");
 
-?>
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-TRY THIS AND SEE IF IT IS WORKING
+
+
+// }
+// 	else 
+// 		die("please enter a username and a password");
+
+// ?>
+// // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// TRY THIS AND SEE IF IT IS WORKING
 <?php	
-	$db =mysql_connect("igor.gold.ac.uk","ma301an","Koolck94");
-	$found = mysql_select_db("ma301an_FitnessPal1") or die("couldn't connect");
-	
-	if(isset($_POST['submit']))
+	session_start();
+	$username = $_POST['Email'];
+	$password = $_POST['Password'];
+	if($username&&$password)
 	{
-		$username=mysql_escape_string($_POST['uName']);
-		$password=mysql_escape_string($_POST['pass']);
-		if(!$username||!$password)
+		$db =mysql_connect("igor.gold.ac.uk","ma301an","Koolck94");
+		$found = mysql_select_db("ma301an_FitnessPal1") or die("couldn't connect");
+
+		$query =mysql_query("SELECT * FROM register WHERE `email`='$username'");
+		$numrows = mysql_num_rows($query);
+		if($numrows!=0)
 		{
-			echo("You must fill all fields!<br>");
-			echo "<a href=logIntable.html>Back</a>";
-			exit();
-		}
-		$sql=mysql_query("SELECT* FROM login WHERE `userName`='$username'
-			AND `password`='$password'");
-		if(mysql_num_rows($sql)>0)
-		{
-			echo("You logged in");
-			echo $query;
-			exit();
+			while ($row =mysql_fetch_assoc($query))
+			{
+				$dbusername = $row['email'];
+				$dbpassword = $row['password'];
+				$_SESSION['customerName'] = $username;
+			}
+			//check to if they match
+			if($username==$dbusername && md5($password)==$dbpassword)
+			{
+				//require("php/member.php");
+			}
+			else
+				echo "incorrect password!";
+				//include("index.html");
 		}
 		else 
-			echo "Incorrect username and password <br>";
-			echo "<a href=logIntable.html>Back</a>";
-	}
-	else 
-	{
-		
-	}
+			{
+				//die("that user doesnt exist! <br> <a href=index.html>Login</a>");
+				
+			}
+	}else 
+		{
+			//die("please enter a username and a password");
+		}
+
 ?>
 
 
