@@ -46,7 +46,7 @@
 				echo "$first_name is now a member";
 			}
 			else {
-				echo "Fucked up everything"
+				echo "coudnt register you";
 			}
 		}
 	}
