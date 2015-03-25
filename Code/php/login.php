@@ -79,6 +79,7 @@
 			if($username==$dbusername && md5($password)==$dbpassword)
 			{
 				//require("php/member.php");
+				echo"you are logged in";
 			}
 			else
 				echo "incorrect password!";
