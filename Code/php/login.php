@@ -2,17 +2,17 @@
 
 session_start();
 
-$username = $_POST['username'];
+$email = $_POST['Email'];
 $password = $_POST['password'];
 
-if ($username&&$password)
+if ($email&&$password)
 
 {
 
-$connect = mysql_connect("localhost","root","") or die ("couldn't connect!");
-mysql_select_db("phplogin") or die("couldn't find db");
+$connect = mysql_connect("igor.gold.ac.uk","ma301an","Koolck94") or die ("couldn't connect!");
+mysql_select_db("ma301an_FitnessPal1") or die("couldn't find db");
 
-$query =mysql_query("SELECT * FROM users WHERE username='$username'");
+$query =mysql_query("SELECT * FROM login WHERE Email='$email'");
 
 $numrows = mysql_num_rows($query);
 
@@ -23,7 +23,7 @@ while ($row =mysql_fetch_assoc($query))
 
 {
 
-	$dbusername = $row['username'];
+	$dbusername = $row['Email'];
 	$dbpassword = $row['password'];
 	
 
@@ -31,8 +31,8 @@ while ($row =mysql_fetch_assoc($query))
 
 }
 
-//check to if they match
-if ($username==$dbusername&&md5($password)==$dbpassword)
+//check if they match
+if ($email==$dbusername&&md5($password)==$dbpassword)
 {
 
 	echo "You're in! <a href='member.php'>Click</a> here to enter the member page.";
