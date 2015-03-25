@@ -11,10 +11,15 @@
 	<!--<link rel="stylesheet" href="css/main.css"/> -->
 <link href="css/fullcalendar.css" rel='stylesheet' />
 <link href="css/fullcalendar.print.css" rel='stylesheet' media='print' />
+
+
+
 <script src="javascript/moment.min.js"></script>
 <script src="javascript/jquery.min.js"></script>
 <script src="javascript/jquery-ui.custom.min.js"></script>
 <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+
 <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
 <script src="javascript/jquery.ui.touch-punch.min.js"></script>
 <script src="javascript/fullcalendar.min.js"></script>
@@ -83,11 +88,12 @@
 		
 	#external-events {
 		float:left;
-		width: 50px;
+		width: 17%;
 		padding: 0 10px;
 		border: 1px solid #ccc;
 		background: #eee;
 		text-align: left;
+		margin:0.8%;
 	}
 	
 	
@@ -185,18 +191,20 @@
 	
 	<div id='wrap'>
 
+   
 		<div id='external-events'>
 			<h4>Legs</h4>
 			
-			<div class='fc-event'>Biceps</div>
-			<div class='fc-event'>Triceps</div>
-			<div class='fc-event'>Shoulders</div>
-			<div class='fc-event'>Chest</div>
-			<div class='fc-event'>Core</div>
+			<div class='fc-event'>Lunges</div>
+			<div class='fc-event'>Calf Raises</div>
+			<div class='fc-event'>Leg-Extensions</div>
+			<div class='fc-event'>Squats</div>
+			
 			<p>
 				<input type='checkbox' id='drop-remove' />
 				<label for='drop-remove'>remove after drop</label>
 			</p>
+		</div>
 		</div>
 		
 		
@@ -205,20 +213,18 @@
 
 		<div id='external-events'>
 			<h4>Arms</h4>
-			<div class='fc-event'>One Set</div>
-			<div class='fc-event'>Two Sets</div>
-			<div class='fc-event'>Three Sets</div>
-			<div class='fc-event'>Four Sets</div>
-			<div class='fc-event'>Five Sets</div>
+			<div class='fc-event'>Zottman Curl</div>
+			<div class='fc-event'>Overhead Cable Curl</div>
+			<div class='fc-event'>Standing Barbell curl</div>
+			<div class='fc-event'>Lying Barbell Tricep Extension</div>
+			
 			<p>
 				<input type='checkbox' id='drop-remove' />
 				<label for='drop-remove'>remove after drop</label>
 			</p>
 		</div>
 
-		<div id='calendar'></div>
-
-		<div style='clear:both'></div>
+	
 
 	</div>
 	
@@ -227,16 +233,39 @@
 
 		<div id='external-events'>
 			<h4>Chest</h4>
-			<div class='fc-event'>One Set</div>
-			<div class='fc-event'>Two Sets</div>
-			<div class='fc-event'>Three Sets</div>
-			<div class='fc-event'>Four Sets</div>
-			<div class='fc-event'>Five Sets</div>
+			<div class='fc-event'>Bench Press</div>
+			<div class='fc-event'>Incline Flyes</div>
+			<div class='fc-event'>Butterfly</div>
+			<div class='fc-event'>Cable Iron Cross</div>
+			
 			<p>
 				<input type='checkbox' id='drop-remove' />
 				<label for='drop-remove'>remove after drop</label>
 			</p>
 		</div>
+		</div>
+		
+		
+		<div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Back</h4>
+			<div class='fc-event'>Deadlifts</div>
+			<div class='fc-event'>Pull ups/Chin ups</div>
+			<div class='fc-event'>Cable Seated Rowing</div>
+			
+			<p>
+				<input type='checkbox' id='drop-remove' />
+				<label for='drop-remove'>remove after drop</label>
+			</p>
+		</div>
+		</div>
+		
+		
+		
+		
+		
+		
 
 		<div id='calendar'></div>
 

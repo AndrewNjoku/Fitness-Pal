@@ -1,6 +1,6 @@
-.exercise h3:hover
+.Exercises h3:hover
 {
-	background:#CBC8C8;
+	background:blue;
 	color:#000000; 
 	cursor:pointer;
 }
