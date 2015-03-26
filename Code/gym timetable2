@@ -37,7 +37,7 @@
     
     
     $.ajax({
-   url: 'process.php',
+   url: 'http://doc.gold.ac.uk/~ma301an/FitnessPal/process.php',
    type: 'POST',   //send post data
    data: 'type=fetch',
    async: false,
@@ -93,8 +93,6 @@ var currentMousePos = {
 		-----------------------------------------------------------------*/
         
 		$('#calendar').fullCalendar({
-			
-			//events: JSON.parse(json_events),
 			
 			header: {
 				left: 'prev,next today',
