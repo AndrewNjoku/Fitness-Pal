@@ -63,6 +63,18 @@
 	
 }
 
+#footer8{
+	
+	background-color:#0098D9;
+	bottom:-700px;
+	width:100%;
+	height:40%;
+	left:0px;
+	z-index:20;
+	
+	
+}
+
 /*Includes headings*\
  * 
  */
