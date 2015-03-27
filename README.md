@@ -20,3 +20,7 @@ Hardware requirements:
 •	Google Chrome (if you need testing from a Laptop or PC)
 •	Ripple emulator plug in (if you need testing from a Laptop or PC using Google Chrome ONLY)
 
+Server interaction
+
+Some of the html files for this program are hosted on igor with a link to http://doc.gold.ac.uk/~ma301an/work/demos/default.html for the gym timetable as it would only work on the server, should be open access. Also once application has accessed this page if you click on any other page it will also be accessed from igor under the demos directory.
+
