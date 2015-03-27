@@ -1,73 +1,246 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
+<!DOCTYPE html>
 <head>
-<style type='text/css'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        body {
-                margin-top: 40px;
-                text-align: center;
-                font-size: 14px;
-                font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-                }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='../dist/fullcalendar.css' rel='stylesheet' />
+<link href='../dist/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link rel="stylesheet" href="css/menu.css"/>	
+<link rel="stylesheet" href="css/topnav_style.css"/>
+<link rel="stylesheet" href="css/footer_style.css"/>
+<script src="javascript/menu.js"></script>
+<script src='../lib/moment/moment.min.js'></script>
+<script src='../lib/jquery/jquery-1.11.2.js'></script>
+<script src='../dist/fullcalendar.js'></script>
+<link rel="stylesheet" href="css/menu.css"/>
+<script src="javascript/menu.js"></script>
 
-        #calendar {
-                width: 900px;
-                margin: 0 auto;
-                }
+<!-- Inline script controlling scrolling using scrollspy -->
+<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			defaultDate: '2014-11-12',
+			selectable: true,
+			selectHelper: true,
+			select: function(start, end) {
+				var title = prompt('Event Title:');
+				var eventData;
+				if (title) {
+					eventData = {
+						title: title,
+						start: start,
+						end: end
+					};
+					$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+				}
+				$('#calendar').fullCalendar('unselect');
+			},
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2014-11-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2014-11-07',
+					end: '2014-11-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2014-11-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2014-11-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2014-11-11',
+					end: '2014-11-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2014-11-12T10:30:00',
+					end: '2014-11-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2014-11-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2014-11-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2014-11-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2014-11-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2014-11-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2014-11-28'
+				}
+			]
+		});
+		
+	});
+
+	
+</script>
+
+<style>
+
+	
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
 
 </style>
-<link rel='stylesheet' type='text/css' href='../fullcalendar/fullcalendar.css' />
-<script type='text/javascript' src='../jquery/jquery.js'></script>
-<script type='text/javascript' src='../jquery/ui.core.js'></script>
-<script type='text/javascript' src='../jquery/ui.draggable.js'></script>
-<script type='text/javascript' src='../fullcalendar/fullcalendar.js'></script>
-<script type='text/javascript'>
 
-        $(document).ready(function() {
-        
-                var d = new Date();
-                var y = d.getFullYear();
-                var m = d.getMonth();
-        
-                $('#calendar').fullCalendar({
-                        draggable: true,
-                        events: [
-                                {
-                                        id: 1,
-                                        title: "Long Event",
-                                        start: new Date(y, m, 6, 14, 0),
-                                        end: new Date(y, m, 11)
-                                },
-                                {
-                                        id: 2,
-                                        title: "Repeating Event",
-                                        start: new Date(y, m, 2)
-                                },
-                                {
-                                        id: 2,
-                                        title: "Repeating Event",
-                                        start: new Date(y, m, 9)
-                                },
-                                {
-                                        id: 3,
-                                        title: "Meeting",
-                                        start: new Date(y, m, 20, 9, 0)
-                                },
-                                {
-                                        id: 4,
-                                        title: "Click for Facebook",
-                                        start: new Date(y, m, 27, 16),
-                                        end: new Date(y, m, 29),
-                                        url: "http://facebook.com/"
-                                }
-                        ]
-                });
-                
-        });
 
-</script>
+
+
 </head>
-<body>
-<div id='calendar'></div>
+ 
+<body class="pushmenu-push">
+<nav class="pushmenu pushmenu-left">
+        <h3>Welcome</h3>
+    <a href="index.html">Home</a>
+    <a href="member.php">My Account</a>
+    <a href="exerciseN.html">Exercise Hub</a>
+    <a href="http://doc.gold.ac.uk/~ma301an/work/demos/selectable.html">Gym Schedule</a>
+    <a href="BMI.html">BMI Calculator</a>
+    <a href="Gym_finder.html">Gym Finder</a>
+</nav>
+ 
+<div class="container">
+	
+	
+	
+	<div id="top_menu">
+		
+
+
+
+ <div id="Logo">
+ 	
+ <img src="images/Logo.png" alt="Logo" src ="Logo.png" align="left" width="370" height="150" top="12px" target="_blank" ></div>
+ 
+ 
+
+
+ 
+
+<div id="chain">
+	
+	
+<img src="images/chain.png" alt="chain" src ="Logo.png"align=width="100" height="50" top="12px" >
+
+</div>
+
+
+</div>
+
+	
+	
+	
+	
+	
+	
+	
+        <div class="main">
+        	
+        <section class="buttonset">
+        	
+            <div id="nav_list">Show/Hide Left Push Menu</div>
+        </section>
+         
+        <section class="content">
+        
+        
+        
+        <body class="pushmenu-push">
+<nav class="pushmenu pushmenu-left">
+        <h3>Welcome Peter Yee</h3>
+     <a href="index.html">Home</a>
+    <a href="member.php">My Account</a>
+    <a href="exerciseN.html">Exercise Hub</a>
+    <a href="Gym-timetable.html">Gym Schedule</a>
+    <a href="#">Goal Tracker</a>
+    <a href="BMI.html">BMI Calculator</a>
+    <a href="Gym_finder.html">Gym Finder</a>
+</nav>
+ 
+<div class="container">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+        <div class="main">
+        	
+        <section class="buttonset">
+        	
+            <div id="nav_list">Show/Hide Left Push Menu</div>
+        </section>
+         
+        <section class="content">
+
+
+	<div id='calendar'></div>
+<div id="footer4">
+		
+		
+		
+	   <p> <h5>   Copyright CS Networks 2015  </h5>   </p>    <div id="footerlinks"> <h4>   Contact Us &nbsp&nbsp&nbsp&nbsp About us </h4> </div> <br>      
+	
+		
+		
+	</div>
+
+	
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+	
+        </section><!-- END END content -->
+    </div><!-- END main -->
+</div><!-- END container -->
 </body>
 </html>

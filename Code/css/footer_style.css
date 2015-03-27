@@ -5,7 +5,7 @@
 	background-color:#0098D9;
 	top:735px;
 	width:100%;
-	height:27%;
+	height:45%;
 	z-index:20;
 	left:0px;
 }
@@ -24,6 +24,44 @@
 	z-index:20;
 }
 
+#footer3
+{
+	position:absolute;
+	background-color:#0098D9;
+	top:735px;
+	width:100%;
+	height:10%;
+	left:0px;
+	z-index:20;
+	
+}
+
+#footer4
+{
+	position:absolute;
+	background-color:#0098D9;
+	top:720px;
+	width:100%;
+	height:35%;
+	left:0px;
+	z-index:20;
+	
+	
+	
+	
+}
+#footer5
+{
+	position:absolute;
+	background-color:#0098D9;
+	top:900px;
+	width:100%;
+	height:40%;
+	left:0px;
+	z-index:20;
+	
+	
+}
 
 /*Includes headings*\
  * 

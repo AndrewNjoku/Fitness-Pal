@@ -73,12 +73,12 @@
         right:30px;
         top:30px;
         height: 50px;
-        width: auto;
+        width: 100px;
         text-indent: -99999em;  
         z-index:5000;
         
 }
- 
+
 #nav_list.active {
         background-position: -33px top; 
 }
